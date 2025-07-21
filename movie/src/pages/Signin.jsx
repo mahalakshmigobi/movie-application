@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Addbook.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 export const Signin = () => {
+  const navigate = useNavigate();
   const [users, setusers] = useState({
     name: "",
     email_id: "",
@@ -14,10 +16,10 @@ export const Signin = () => {
     try {
       console.log(users);
       // axios.post('http://localhost:3500/dashboard/user',users);
-      axios.post("http://localhost:3030/dashboard/user", users);
-
-      //  .then(response => console.log(response))
-      //  .catch(error => console.error('Request failed:', error));
+      axios
+        .post("http://localhost:3030/dashboard/user", users)
+        .then((response) => navigate("/home"))
+        .catch((error) => console.error("Request failed:", error));
     } catch (error) {
       console.error("error in adding signin!-${error}");
     }
