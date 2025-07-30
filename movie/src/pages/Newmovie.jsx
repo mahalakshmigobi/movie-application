@@ -18,7 +18,7 @@ export const Newmovie = () => {
       console.log(bookings);
 
       axios
-        .post("http://localhost:3030/dashboard/booking", bookings)
+        .post("https://movie-apply.onrender.com/dashboard/booking", bookings)
         .then((response) => console.log(response))
         .catch((error) => console.error("Request failed:", error));
       navigate('/');

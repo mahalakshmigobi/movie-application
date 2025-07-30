@@ -17,7 +17,7 @@ export const Signin = () => {
       console.log(users);
       // axios.post('http://localhost:3500/dashboard/user',users);
       axios
-        .post("http://localhost:3030/dashboard/user", users)
+        .post("https://movie-app-e3s2.onrender.com/dashboard/user", users)
         .then((response) => navigate("/home"))
         .catch((error) => console.error("Request failed:", error));
     } catch (error) {

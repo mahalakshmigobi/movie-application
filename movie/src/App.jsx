@@ -31,7 +31,7 @@ function App() {
         <Route path="/eventsticket" element={<Eventsticket />}></Route>
         <Route path="/newmovie" element={<Newmovie />}></Route>
         <Route path="/booking" element={<Booking />}></Route>
-        {/* <Route path="/about" element={<About />}></Route> */}
+       
       </Routes>
     </>
   );

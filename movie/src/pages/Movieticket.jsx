@@ -1,78 +1,4 @@
-// import React from 'react'
-// import '../styles/Movieticket.css'
-// export const Movieticket = () => {
-//     const handlesubmit=()=>{
 
-//     }
-//   return (
-//     <>
-//       <form className='form container' onSubmit={handlesubmit}>
-//      <section className="form-group">
-//         <h1>Movie Ticket Booking</h1>
-
-      
-//         <div className="section" id="movieSection">
-//             <label >Select Movie</label>
-//             <select  className='form-input' required>
-//                 <option value="Labur panthu" >Labur panthu</option>
-//                 <option value="Lucky baskar">Lucky baskar</option>
-//                 <option value="Meiyalagan">Meiyalagan</option>
-//                 <option value="Kadai ulaga por">Kadai ulaga por</option>
-//                 <option value="GOAT">GOAT</option>
-//                 <option value="Vazlai">Vazlai</option>
-//             </select>
-//         </div>
-
-      
-//         <div className="section" id="dateSection">
-//             <label >Select Date</label>
-//             <input type="date" id="date" required className='form-input' />
-//         </div>
-
-      
-//         <div className="section" id="timeSection">
-//             <label>Select Time</label>
-//             <select id="time"className='form-input'required >
-//                 <option value="12:00 PM" >12:00 PM</option>
-//                 <option value="03:00 PM">03:00 PM</option>
-//                 <option value="06:00 PM">06:00 PM</option>
-//             </select>
-//         </div>
-
-       
-//         <div  id="seatSection" className="form-group">
-//             <label>Number of Seats</label>
-//             <input type="number" id="seats" required className='form-input' min="1" max="10" value="1"/>
-//         </div>
-
-      
-//         {/* <button id="proceedButton">Proceed to Payment</button> */}
-
-   
-//         <div id="paymentSection" className="section">
-//             <h3>Payment Details</h3>
-//             <label >Card Number</label>
-//             <input type="text" id="cardNumber"required className='form-input'  placeholder="Enter your card number"/>
-
-//             <label >CVV</label>
-//             <input type="text" id="cvv" required className='form-input'  placeholder="Enter CVV"/>
-
-//             <button id="payButton">Pay Now</button>
-//         </div>
-
-       
-//         {/* <div id="confirmationSection" className="section" >
-//             <h2>Booking Confirmed!</h2>
-//             <p id="confirmationDetails"></p>
-//         </div> */}
-//     </section>
-// </form>
-   
-
-//     </>
-//   )
-// }
-// export default Movieticket
 //new
 
 import React, { useState } from 'react'
@@ -94,7 +20,7 @@ seat_no:""
         try{
            console.log(bookings);
             
-            axios.post('http://localhost:3030/dashboard/booking', bookings)
+            axios.post('https://movie-apply.onrender.com/dashboard/booking', bookings)
        .then(response => console.log(response))
        .catch(error => console.error('Request failed:', error));
         navigate('/');

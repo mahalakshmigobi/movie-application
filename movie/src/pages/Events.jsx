@@ -24,7 +24,7 @@ export const Events = () => {
                 <br />
                 Standup Comedy
               </p>
-              <Link to="eventsticket" className="btn btn-success">
+              <Link to="/eventsticket" className="btn btn-success">
                 Booking Now
               </Link>
             </th>
@@ -35,7 +35,7 @@ export const Events = () => {
                 <br /> Trichy
               </h5>
               <p className="card-text">Concerts</p>
-              <Link to="eventsticket" className="btn btn-success">
+              <Link to="/eventsticket" className="btn btn-success">
                 Booking Now
               </Link>
             </th>
@@ -44,11 +44,11 @@ export const Events = () => {
               <img src={comedy2} alt="comedy3" width="200" height="400" />
               <h5 className="card-title">
                 Baker OP in
-                <br /> The House{" "}
+                <br /> The House
               </h5>
               <p className="card-text">Standup comedy</p>
 
-              <Link to="eventsticket" className="btn btn-success">
+              <Link to="/eventsticket" className="btn btn-success">
                 Booking Now
               </Link>
             </th>
@@ -60,7 +60,7 @@ export const Events = () => {
               </h5>
               <p className="card-text">Food</p>
 
-              <Link to="eventsticket" className="btn btn-success">
+              <Link to="/eventsticket" className="btn btn-success">
                 Booking Now
               </Link>
             </th>
@@ -84,13 +84,14 @@ export const Events = () => {
                 Pit Stop
               </h5>
               <p className="card-text">Comedy</p>
-              <Link to="eventsticket" className="btn btn-success">
+              <Link to="/eventsticket" className="btn btn-success">
                 Booking Now
               </Link>
             </th>
           </table>
         </div>
       </center>
+
     </>
   );
 };

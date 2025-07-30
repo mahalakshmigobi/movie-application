@@ -7,7 +7,7 @@ export const Booking = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3030/dashboard/Booking') // Replace with your API endpoint
+    axios.get('https://movie-app-e3s2.onrender.com/dashboard/Booking') // Replace with your API endpoint
       .then((response) => setData(response.data))
       .catch((error) => console.error('Error fetching data:', error))
       .finally(() => setLoading(false));
