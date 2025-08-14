@@ -4,7 +4,7 @@ import "../styles/Addbook.css";
 import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
-export const Login = () => {
+export const Frontlogin = () => {
   const [users, setusers] = useState({
     email_id: "",
     password: "",
@@ -14,7 +14,7 @@ export const Login = () => {
   const handlesubmit = (e) => {
     e.preventDefault();
     try {
-      console.log("Attempting login for:", users);
+      console.log("Attempting Frontlogin for:", users);
 
       axios
         .get("https://movie-apply.onrender.com/dashboard/user", users)
@@ -29,7 +29,7 @@ export const Login = () => {
             );
 
             if (foundUser) {
-              navigate("/header");
+              navigate("/home");
             } else {
               console.log("User not found or credentials do not match.");
               alert("Invalid email or password. Please try again.");
@@ -40,11 +40,11 @@ export const Login = () => {
           }
         })
         .catch((error) => {
-          console.error("Login request failed:", error);
-          alert("An error occurred during login. Please try again.");
+          console.error("Frontlogin request failed:", error);
+          alert("An error occurred during Frontlogin. Please try again.");
         });
     } catch (error) {
-      console.error("Error in handling login:", error);
+      console.error("Error in handling Frontlogin:", error);
       alert("An unexpected error occurred. Please try again.");
     }
   };
@@ -82,9 +82,11 @@ export const Login = () => {
       </section>
 
       <button type="submit" className="form-button">
-        Login
+        login
       </button>
+      <p>If create an new account  <a href="/signin">Register</a></p>
+     
     </form>
   );
 };
-export default Login;
+export default Frontlogin;

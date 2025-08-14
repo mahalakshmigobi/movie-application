@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Frontlogin from "./component/Frontlogin";
 import Header from "./component/Header";
 import Home from "./pages/Home";
 import Watchlist from "./pages/Watchlist";
@@ -20,7 +21,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Header />}></Route>
+         <Route path="/" element={< Frontlogin/>}></Route>
+        <Route path="/header" element={<Header />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/events" element={<Events />}></Route>
         <Route path="/watchlist" element={<Watchlist />}></Route>

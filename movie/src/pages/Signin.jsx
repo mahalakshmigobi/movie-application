@@ -18,7 +18,7 @@ export const Signin = () => {
       // axios.post('http://localhost:3500/dashboard/user',users);
       axios
         .post("https://movie-app-e3s2.onrender.com/dashboard/user", users)
-        .then((response) => navigate("/home"))
+        .then((response) => navigate("/header"))
         .catch((error) => console.error("Request failed:", error));
     } catch (error) {
       console.error("error in adding signin!-${error}");
